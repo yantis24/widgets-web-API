@@ -19,6 +19,7 @@ provided in the response).
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Taboola Tech Test</title>
 
     <link rel="stylesheet" href="css/components/style.css">
@@ -26,19 +27,46 @@ provided in the response).
   </head>
 
 <body>
+
+
+    <div class="header">
+        <div>
+          <h4>You May Like</h4>
+        </div>
+        <div class= "taboola_link">
+          <p>Sponsored Links by Taboola</p>
+        </div>
+    </div>
+
   <div class="container">
-    <div class="title">
-      <div>
-        <h4>You May Like</h4>
-      </div>
-       <div class= "taboola_link">
-        <p>Sponsored Links by Taboola</p>
-      </div>
+
+    <div class="item">
+        <div class = "text-category">
+            <span id="category-media">Entertainment</span>
+        </div>
+        <a class= "link" id="media-url" href="#" target="_blank">
+          <img class= "widget-image" id="image-media" src="#">
+          <div class = "text-content">
+            <div class = "text-branding">
+              <span id= "branding-media"></span>
+            </div>
+            <div class = "text-title">
+              <span id="title-media">Play this for 1 minute and see why everyone is addicted</span>
+            </div>
+          </div>
+        </a>
     </div>
-    <div class="widget-container">
-      <h1>Articles</h1>
-        <ul id="items"></ul>
+   <!--    <div class="item">CSS</div>
+      <div class="item">with</div>
+      <div class="item">Flexbox</div>
+      <div class="item">and</div>
+      <div class="item">Grid</div> -->
+
+  <!--   <div class="title">
+
     </div>
+ -->
+
   </div>
 
   <script src="app.js"></script>
