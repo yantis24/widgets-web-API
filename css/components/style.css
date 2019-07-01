@@ -1,25 +1,52 @@
 
-.container-test {
-  margin: 5px auto;
+.body {
+  background-color: #d8d8d4;
+}
+
+.container {
+  margin: 50px auto;
   display: grid;
   width: 1024px;
+  border-top: 1px solid rgba(50,50,50,.5);
   grid-gap: 10px;
   grid-auto-rows: minmax(30px,auto);
-  grid-template-columns: repeat(3, minmax(min-content,300px));
-  grid-template-columns: repeat(auto-fit, minmax(min-content,300px));
-  grid-template-columns: repeat(auto-fill, minmax(min-content,300px));
+  grid-template-columns: repeat(3, minmax(min-content,260px));
+  grid-template-columns: repeat(auto-fit, minmax(min-content,260px));
+  grid-template-columns: repeat(auto-fill, minmax(min-content,260px));
 
-  width: 85%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 75%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-auto-rows: minmax(30px,auto);
+  cursor: pointer;
+
+
 }
 
 .header {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(50,50,50,.5);
   grid-column: 1/-1;
-  display: flex;
-  justify-content: space-between;
   padding: 1% 10px;
+}
+
+.header-1 {
+ position: relative;
+ top: 10px;
+ font-family: 'PT Sans Caption', sans-serif;
+ font-size: 22px;
+ margin-block-start: auto;
+ margin-block-end: auto;
+ display: flex;
+ justify-content: center;
+}
+
+.header-2 {
+ position: relative;
+ top: -15px;
+ display: flex;
+ justify-content: flex-end;
 }
 
 .boxes {
@@ -28,15 +55,15 @@
 
 .footer {
   grid-column: 1/-1;
-  background-color: yellow;
+  background-color: rgba(0,0,0,.8);
+  height: 60px;
+  color: white;
 }
 
 .item {
   position: relative;
   margin: auto 0;
   border: 0.2px solid rgba(200,200,200,.3);
- /* text-align: center;
-  justify-content: center;*/
   background-color: rgba(255,255,255,0.3);
 }
 
@@ -77,10 +104,12 @@
 
 .text-title {
   font-family: 'Fira Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 5px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   color: rgba(0,0,0,.85);
-  margin-block-start: 1em;
-  margin-block-end: 2em;
-/*  margin: auto;*/
+  margin-block-end: 1.5em;
 }
