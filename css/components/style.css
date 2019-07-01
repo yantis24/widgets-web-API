@@ -1,39 +1,77 @@
 
-
 .container  {
   /*background-color: #dddbdb;*/
   width: 1000px;
   height: auto;
-  margin: 0 auto;
+  margin: 50px auto;
   display: grid;
 
-  grid-template-rows: repeat(2, minmax(300px, min-content));
+/*  grid-template-columns: 300px 300px 300px;
   grid-template-columns: repeat(auto-fill, 300px);
   grid-template-columns: repeat(auto-fit, 300px);
-  grid-column-gap: 20px;
+  grid-template-rows: repeat(3, minmax(300px, min-content));*/
+
+  grid-template-rows: repeat(3, minmax(10px, min-content));
+/*  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr 1fr 1fr));*/
+
+/*  grid-template-columns: repeat(auto-fill, 300px);*/
+  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(3,auto-fit 300px);
+  grid-column-gap: 15px;
   grid-row-gap: 15px;
 
+/*  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+/*  grid-template-columns: repeat(auto-fit, 300px);*/
+
+  grid-template-areas:
+    "header header header"
+    "item-1 item-2 item-3"
+    "item-4 item-5 item-6"
+
+/*
   width: 80%;
- /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-/*  grid-template-rows: repeat(6, minmax(300px, max-content));*/
+  grid-template-rows: repeat(6, minmax(300px, max-content));*/
 
 }
 
 .header{
-  width: 1000px;
-  margin: 0 auto;
+  grid-area: header;
+/*  margin: 0 auto;*/
   display: flex;
   justify-content: space-between;
 }
 
-.item {
+.item-1{
+  grid-area: item-1;
+}
+.item-2{
+  grid-area: item-2;
+}
+.item-3{
+  grid-area: item-3;
+}
+.item-4{
+  grid-area: item-4;
+}
+.item-5{
+  grid-area: item-5;
+}
+.item-6{
+  grid-area: item-6;
+}
 
+
+
+
+
+.item {
   position: relative;
   text-align: center;
   justify-content: center;
   background-color: rgba(255,255,255,0.3);
-  border: 0px solid black;
+  border: 0.2px solid black;
 }
 
 .title {
@@ -70,7 +108,7 @@
 
 .text-branding{
   position: absolute;
-  top: 73%;
+  top: 67%;
   font-family: "Georgia", "serif";
   font-size: 26px;
   color: rgba(255,255,255,1);

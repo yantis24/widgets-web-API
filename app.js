@@ -1,5 +1,5 @@
 
-const ul = document.getElementById('items');
+const thumbs = document.getElementById('thumbnail');
 const brandingMedia = document.getElementById('branding-media');
 const titleMedia = document.getElementById('title-media');
 const catMedia = document.getElementById('category-media');
@@ -17,19 +17,21 @@ function append(parent, el) {
 fetch(url)
   .then((resp) => resp.json()) //transform the data into json
   .then(function(data) {  // Create and append the list
-    // console.log(data);
     let items = data.list
       return items.map (item => {
         const article_name = item.name;
         const article_branding = item.branding;
         const article_categories = item.categories[0];
         const article_url = item.url;
-
         const images = item.thumbnail
           images.map(image => {
             let article_image = image;
             let imageUrl = (Object.values(article_image));
-            let imageUpload = imageUrl[0];
+        let imageUpload = imageUrl[0];
+        // let div = createNode('div');
+        // let span = createNode('span');
+        // span.innerHTML = `${article_categories}`;
+        // append(div,span);
 
         catMedia.innerHTML = `${article_categories}`;
         mediaUrl.href = `${article_url}`;
@@ -37,11 +39,11 @@ fetch(url)
         brandingMedia.innerHTML = `${article_branding}`;
         titleMedia.innerHTML = `${article_name}`;
 
-        // console.log(article_categories);
+        console.log(article_categories);
         // console.log(article_name);
         // console.log(article_branding);
         // console.log(article_url);
-        // console.log (imageUpload);
+        console.log (imageUpload);
       })
     })
   })
